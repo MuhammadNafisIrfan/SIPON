@@ -284,12 +284,21 @@
             <!-- small box -->
             <div class="small-box bg-info">
               <div class="inner">
-                <h3>150</h3>
+                <?php
+                $connection = mysqli_connect("localhost", "root", "", "sipon");
 
-                <p>New Orders</p>
+                $query = "SELECT id FROM santri ORDER by id";
+                $query_run = mysqli_query($connection, $query);
+
+                $row = mysqli_num_rows($query_run);
+                echo '<h3> '.$row.' </h3>';
+                      
+                      ?>
+
+                <p>Jumlah Santri</p>
               </div>
               <div class="icon">
-                <i class="ion ion-bag"></i>
+                <i class="fa fa-users"></i>
               </div>
               <a href="#" class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></a>
             </div>
@@ -299,12 +308,20 @@
             <!-- small box -->
             <div class="small-box bg-success">
               <div class="inner">
-                <h3>53<sup style="font-size: 20px">%</sup></h3>
+              <?php
+                $connection = mysqli_connect("localhost", "root", "", "sipon");
 
-                <p>Bounce Rate</p>
+                $query = "SELECT id FROM pelanggaran ORDER by id";
+                $query_run = mysqli_query($connection, $query);
+
+                $row = mysqli_num_rows($query_run);
+                echo '<h3> '.$row.' </h3>';
+                      
+                      ?>
+                <p>Santri Melanggar</p>
               </div>
               <div class="icon">
-                <i class="ion ion-stats-bars"></i>
+                <i class="fa fa-minus-circle"></i>
               </div>
               <a href="#" class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></a>
             </div>
@@ -314,12 +331,20 @@
             <!-- small box -->
             <div class="small-box bg-warning">
               <div class="inner">
-                <h3>44</h3>
+              <?php
+                $connection = mysqli_connect("localhost", "root", "", "sipon");
 
-                <p>User Registrations</p>
+                $query = "SELECT id FROM tunggakan ORDER by id";
+                $query_run = mysqli_query($connection, $query);
+
+                $row = mysqli_num_rows($query_run);
+                echo '<h3> '.$row.' </h3>';
+                      
+                      ?>
+                <p>Santri Berhutang</p>
               </div>
               <div class="icon">
-                <i class="ion ion-person-add"></i>
+                <i class="fa fa-shopping-cart"></i>
               </div>
               <a href="#" class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></a>
             </div>
