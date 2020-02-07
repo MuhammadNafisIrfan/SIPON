@@ -31,15 +31,16 @@
 <div class="wrapper">
 
   <!-- Navbar -->
-  <nav class="main-header navbar navbar-expand navbar-white navbar-light">
+  <nav class="main-header navbar navbar-expand navbar-grey navbar-dark">
     <!-- Left navbar links -->
 
     <ul class="navbar-nav">
     
     <style type="text/css">
      pe {
-       font-family:"impact", "Lucida Grande", sans-serif;
+       font-family:"arial", "Lucida Grande", sans-serif;
        font-size:25px;
+       color:'#fffff';
        Margin-left:30px;
        padding : 7px;
      }
