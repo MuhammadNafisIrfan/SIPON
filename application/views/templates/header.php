@@ -38,9 +38,9 @@
     
     <style type="text/css">
      pe {
-       font-family:"arial", "Lucida Grande", sans-serif;
+       font-family:"arial";
        font-size:25px;
-       color:'#fffff';
+       color: white;
        Margin-left:30px;
        padding : 7px;
      }
