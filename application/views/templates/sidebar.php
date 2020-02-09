@@ -1,7 +1,7 @@
  <!-- Main Sidebar Container -->
  <aside class="main-sidebar sidebar-dark-primary ">
     <!-- Brand Logo -->
-    <a href="dashboard" class="brand-link">
+    <a href="../admin/dashboard" class="brand-link">
       <img src=" <?php echo base_url() ?>assets/dist/img/qbs_logo.jpg" alt="AdminLTE Logo" class="brand-image img-circle elevation-3"
            style="opacity: .8">
       <span class="brand-text font-weight-light">SIPON QBS</span>
@@ -18,7 +18,7 @@
           <!-- Add icons to the links using the .nav-icon class
                with font-awesome or any other icon font library -->
           <li class="nav-item">
-            <a href="#"  class="nav-link ">
+            <a href="../admin/dashboard"  class="nav-link ">
               <i class="nav-icon fas fa-tachometer-alt"></i>
               <p>
                 Dashboard               
@@ -50,7 +50,7 @@
               <li class="nav-item">
                 <a href="pages/UI/buttons.html" class="nav-link">
                   <i class="far fa-circle nav-icon"></i>
-                  <p>Pelanggran</p>
+                  <p>Pelanggaran</p>
                 </a>
               </li>
               <li class="nav-item">
@@ -63,6 +63,12 @@
                 <a href="pages/UI/modals.html" class="nav-link">
                   <i class="far fa-circle nav-icon"></i>
                   <p>Nilai Santri</p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="../tunggakan/index" class="nav-link">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>Tunggakan Santri</p>
                 </a>
               </li>
             </ul>
