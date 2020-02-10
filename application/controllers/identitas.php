@@ -105,6 +105,8 @@ class Identitas extends CI_Controller {
 
 		$this->myidentitas->update_data($ads,$data,'santri');
 		redirect('identitas/index');
+
+		$this->log_to_javascript_console->write($ads);
 	}
 
 }

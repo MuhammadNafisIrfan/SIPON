@@ -48,7 +48,7 @@
                 </a>
               </li>
               <li class="nav-item">
-                <a href="pages/UI/buttons.html" class="nav-link">
+                <a href="../pelanggaran/index" class="nav-link">
                   <i class="far fa-circle nav-icon"></i>
                   <p>Pelanggaran</p>
                 </a>
@@ -57,12 +57,6 @@
                 <a href="pages/UI/sliders.html" class="nav-link">
                   <i class="far fa-circle nav-icon"></i>
                   <p>Absensi</p>
-                </a>
-              </li>
-              <li class="nav-item">
-                <a href="pages/UI/modals.html" class="nav-link">
-                  <i class="far fa-circle nav-icon"></i>
-                  <p>Nilai Santri</p>
                 </a>
               </li>
               <li class="nav-item">
