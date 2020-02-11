@@ -31,7 +31,7 @@
 <div class="wrapper">
 
   <!-- Navbar -->
-  <nav class="main-header navbar navbar-expand navbar-grey navbar-dark">
+  <nav class="main-header navbar navbar-expand navbar-grey navbar-dark" id="navbar">
     <!-- Left navbar links -->
 
     <ul class="navbar-nav">
@@ -145,3 +145,23 @@
     </ul>
   </nav>
   <!-- /.navbar -->
+  <script>
+var prevScrollpos = window.pageYOffset;
+window.onscroll = function() {
+var currentScrollPos = window.pageYOffset;
+  if (prevScrollpos > currentScrollPos) {
+    document.getElementById("navbar").style.top = "0";
+  } else {
+    document.getElementById("navbar").style.top = "-100px";
+  }
+  prevScrollpos = currentScrollPos;
+}
+</script>
+<style>
+#navbar {
+  position: fixed;
+  top:0;
+  width: 29.3cm;
+  transition: top 0.3s;
+}
+</style>
