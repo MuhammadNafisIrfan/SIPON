@@ -26,7 +26,7 @@
         <tr>
             <td><?php echo $no++ ?></td>
             <td><?php echo $pg->nama_santri?></td>
-            <td>Rp. <?php echo $pg->pelanggaran?></td>
+            <td><?php echo $pg->pelanggaran?></td>
             <td><?php echo $pg->tanggal?></td>
            
         </tr>

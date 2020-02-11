@@ -11,7 +11,7 @@
     </div>
    
    <section class="content">
-   <button class="btn btn-info btn-sm"><i class="fa fa-plus"data-toggle="modal" data-target="#staticBackdrop"> Tambah Santri</i></button>
+   <button class="btn btn-info btn-sm"><i class="fa fa-plus"data-toggle="modal" data-target="#staticBackdrop"> Tambah DATA</i></button>
       <table  class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
         <tr>
         <th>No</th>
@@ -40,7 +40,7 @@
   <div class="modal-dialog" role="document">
     <div class="modal-content">
       <div class="modal-header">
-        <h5 class="modal-title" id="staticBackdropLabel">Masukkan Data Santri</h5>
+        <h5 class="modal-title" id="staticBackdropLabel">Masukkan Data Tunggakan</h5>
         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
           <span aria-hidden="true">&times;</span>
         </button>
