@@ -27,7 +27,19 @@ class Identitas extends CI_Controller {
 		$kelas_pondok = $this->input->post('kelas_pondok');
 		$kelas_payung = $this->input->post('kelas_payung');
 		$semester = $this->input->post('semester');
-		$image = $this->input->post('image');
+		$image = $_FILES['image'];
+
+		if($image=''){}else{
+			$config['upload_path']  ='./assets/foto';
+			$config['allowed_types'] = 'jpg|png|gif';
+
+			$this->load->library('upload',$config);
+			if(!$this->upload ->do_upload('image')){
+				echo "Upload Gagal"; die();
+			}else{
+				$image=$this->upload->data('file_name'); 
+			}
+		}
 		
 
 		$data = array(
@@ -63,13 +75,14 @@ class Identitas extends CI_Controller {
 		$data['identitas'] = $this->myidentitas->edit($where,'santri')->result();
 
 		$this->load->view('templates/header');
-		$this->load->view('templates/sidebar');
+		
 		$this->load->view('iedit',$data);
 		$this->load->view('templates/footer');
 
 	}
 	public function update()
 	{
+		
 		$id = $this->input->post('id');
 		$nama = $this->input->post('nama');
 		$nis = $this->input->post('nis');
@@ -81,8 +94,10 @@ class Identitas extends CI_Controller {
 		$kelas_payung = $this->input->post('kelas_payung');
 		$semester = $this->input->post('semester');
 		$image = $this->input->post('image');
+
 		
 
+	
 		$data = array(
 
 			
@@ -95,7 +110,7 @@ class Identitas extends CI_Controller {
 			'kelas_pondok'	=> $kelas_pondok,
 			'kelas_payung'	=> $kelas_payung,
 			'semester'	=> $semester,
-			'image'	=> $image,
+			'image'	=> $image
 			
 
 		);

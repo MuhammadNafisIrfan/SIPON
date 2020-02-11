@@ -43,7 +43,9 @@
             <td><?php echo $idnt->kelas_pondok?></td>
             <td><?php echo $idnt->kelas_payung?></td>
             <td><?php echo $idnt->semester?></td>
-            <td><img src="<?php echo $idnt->image?>" width=90px, height=90px></img></td>
+            <td>
+              <img src="<?php echo base_url(); ?> assets/foto/<?php echo $idnt->image ?>" width="90" height="110"></img>
+            </td>
             <td onclick="javascriot: return confirm('Anda yakin ingin menghapus data ini ?')"><?php echo anchor('identitas/hapus/'.$idnt->id,'<div class="btn btn-danger btn-sm"><i class="fa fa-trash"></i></div>')?></td>
             <td><?php echo anchor ('identitas/edit/'.$idnt->id,'<div class="btn btn-primary btn-sm"><i class="fa fa-edit"></i></div>') ?></td>
         </tr>
@@ -63,7 +65,9 @@
         </button>
       </div>
       <div class="modal-body">
-        <form method="post" action="<?php echo base_url().'identitas/tambah_aksi';?>">
+        <!-- <form method="post" action="<?php echo base_url().'identitas/tambah_aksi';?>"> -->
+
+        <?php echo form_open_multipart('identitas/tambah_aksi'); ?>
 
         <div class="form-group">
         <label> Nama Santri</label>
@@ -123,12 +127,12 @@
 
         <div class="form-group">
         <label>Image</label>
-        <input type="text" name="image" class="form-control">
+        <input type="file" name="image" class="form-control">
         </div>
         <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
         <button type="reset" class="btn btn-danger">Reset</button>
         <button type="submit" class="btn btn-success">Submit </button>
-        </form>
+        <?php echo form_close(); ?>
       </div>
     </div>
   </div>
