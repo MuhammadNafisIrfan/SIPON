@@ -45,7 +45,7 @@
             <td><?php echo $idnt->semester?></td>
             <td><img src="<?php echo $idnt->image?>" width=90px, height=90px></img></td>
             <td onclick="javascriot: return confirm('Anda yakin ingin menghapus data ini ?')"><?php echo anchor('identitas/hapus/'.$idnt->id,'<div class="btn btn-danger btn-sm"><i class="fa fa-trash"></i></div>')?></td>
-            <td><button class="btn btn-primary btn-sm"><i class="fa fa-edit" data-toggle="modal" data-target="#staticBackdrop2"></i></button></td>
+            <td><?php echo anchor ('identitas/edit/'.$idnt->id,'<div class="btn btn-primary btn-sm"><i class="fa fa-edit"></i></div>') ?></td>
         </tr>
         <?php endforeach; ?>
       </table>  
@@ -138,7 +138,7 @@
 
 <!-- Modal Edit -->
 
-<div class="modal fade" id="staticBackdrop2" data-backdrop="static" tabindex="-1" role="dialog" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+<!-- <div class="modal fade" id="staticBackdrop2" data-backdrop="static" tabindex="-1" role="dialog" aria-labelledby="staticBackdropLabel" aria-hidden="true">
   <div class="modal-dialog" role="document">
     <div class="modal-content">
       <div class="modal-header">
@@ -217,6 +217,6 @@
         <button type="submit" class="btn btn-success">Submit</button>
       </div>
     </div>
-  </div>
+  </div> -->
 </div>
   </div>

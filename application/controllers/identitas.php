@@ -60,10 +60,11 @@ class Identitas extends CI_Controller {
 	public function edit ($id)
 	{
 		$where = array ('id' =>$id);
-		$data['identitas'] = $this->myidentitas->edit_data($where,'santri')->result();
+		$data['identitas'] = $this->myidentitas->edit($where,'santri')->result();
+
 		$this->load->view('templates/header');
 		$this->load->view('templates/sidebar');
-		$this->load->view('identitas=>staticBackdrop2', $data);
+		$this->load->view('iedit',$data);
 		$this->load->view('templates/footer');
 
 	}
