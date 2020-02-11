@@ -114,7 +114,7 @@
   <div class="card shadow mb-4">
     <!-- Card Header - Dropdown -->
     <div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
-      <h6 class="m-0 font-weight-bold text-primary">Overview Pendapatan</h6>
+      <h6 class="m-0 font-weight-bold text-primary">Overview Santri</h6>
     </div>
     <!-- Card Body -->
     <div class="card-body">
@@ -148,10 +148,20 @@ while($row = mysqli_fetch_array($sel_que2)){
     $failure = $row['id'];
 
 }
+$query3 = "SELECT * FROM pelanggaran";
+
+$sel_que3 = mysqli_query($connection, $query3);
+
+while($row = mysqli_fetch_array($sel_que3)){
+
+    $success = $row['id'];
+
+}
 
 $dataPoints = array(
     array("label"=> "Santri Berhutang ", "y"=> $pending),
-    array("label"=> "Total Santri ", "y"=> $failure)
+    array("label"=> "Total Santri ", "y"=> $failure),
+    array("label"=> "Santri Melanggar ", "y"=> $success)
 );
 
 ?>
@@ -165,7 +175,7 @@ animationEnabled: true,
 exportEnabled: true,
 theme: "dark1",
 title:{
-text: "Diagram Penghasilan Ayok Belajar"
+text: "Diagram Santri"
 },
 data: [{
 type: "bar",

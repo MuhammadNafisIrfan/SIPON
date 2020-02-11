@@ -16,7 +16,7 @@
         </div>
 
         <div class="from-group">
-        <label>Keterangan</label>
+        <label>Keterangan   </label>
         <input type="text" name="keterangan" class="form-control" value="<?php echo $tgk->keterangan ?>">
         </div>
 
