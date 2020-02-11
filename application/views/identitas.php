@@ -44,7 +44,7 @@
             <td><?php echo $idnt->kelas_payung?></td>
             <td><?php echo $idnt->semester?></td>
             <td>
-              <img src="<?php echo base_url(); ?> assets/foto/<?php echo $idnt->image ?>" width="90" height="110"></img>
+              <img src="<?php echo base_url(); ?> ../../assets/foto/<?php echo $idnt->image ?>" width="90" height="110"></img>
             </td>
             <td onclick="javascriot: return confirm('Anda yakin ingin menghapus data ini ?')"><?php echo anchor('identitas/hapus/'.$idnt->id,'<div class="btn btn-danger btn-sm"><i class="fa fa-trash"></i></div>')?></td>
             <td><?php echo anchor ('identitas/edit/'.$idnt->id,'<div class="btn btn-primary btn-sm"><i class="fa fa-edit"></i></div>') ?></td>
