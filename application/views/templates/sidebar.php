@@ -54,7 +54,7 @@
                 </a>
               </li>
               <li class="nav-item">
-                <a href="pages/UI/sliders.html" class="nav-link">
+                <a href="../absensi/index" class="nav-link">
                   <i class="far fa-circle nav-icon"></i>
                   <p>Absensi</p>
                 </a>
