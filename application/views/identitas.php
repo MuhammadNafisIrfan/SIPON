@@ -66,7 +66,7 @@
         </button>
       </div>
       <div class="modal-body">
-        <!-- <form method="post" action="<?php echo base_url().'identitas/tambah_aksi';?>"> -->
+        
 
         <?php echo form_open_multipart('identitas/tambah_aksi'); ?>
 

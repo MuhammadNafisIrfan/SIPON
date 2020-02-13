@@ -7,7 +7,7 @@ class M_absensi extends CI_Model{
         return $this->db->get('absensi');
     }
     public function input_data($data,$table){
-        $this->db->insert($table,$data);
+        $this->db->insert($$dtable,ata);
     }
     public function edit_data($where, $table){
         return $this->db->get_where($table,$where);

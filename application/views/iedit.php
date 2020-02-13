@@ -28,7 +28,9 @@
 
 
     <section class="content">
-    <?php foreach($identitas as $idnt) {?>
+         <?php foreach($identitas as $idnt) {?>
+    <?php echo form_open_multipart('identitas/update'); ?>
+       
         <form action="<?php echo base_url().'identitas/update'; ?>" method="post"> 
 
         <div class="from-group">
@@ -97,6 +99,7 @@
         <button type="submit" class="btn btn-success">Submit</button>
 
         </form>
-            <?php } ?>
+        <?php echo form_close(); ?>
+         <?php }?>
     </section>
 </div>
