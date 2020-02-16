@@ -160,8 +160,8 @@ while($row = mysqli_fetch_array($sel_que3)){
 
 $dataPoints = array(
     array("label"=> "Santri Berhutang", "y"=> $pending),
-    array("label"=> "Santri Melanggar ", "y"=> $failure),
-    array("label"=> "Total Santri ", "y"=> $success)
+    array("label"=> "Santri Melanggar ", "y"=> $success),
+    array("label"=> "Total Santri ", "y"=> $failure)
 );
 
 ?>

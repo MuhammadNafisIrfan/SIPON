@@ -11,6 +11,7 @@
     </div>
    
    <section class="content">
+    <a class="btn btn-primary" href=" <?php echo base_url('pelanggaran/pdf') ?>"> <i class="fa fa-file"></i> Export PDF</a>
       <table  class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
         <tr>
         <th>No</th>
