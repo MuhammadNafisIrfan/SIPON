@@ -124,5 +124,21 @@ class Identitas extends CI_Controller {
 
 		$this->log_to_javascript_console->write($ads);
 	}
+	public function pdf(){
+		$this->load->library('dompdf_gen');
+
+		$data['identitas'] = $this->myidentitas->tampil_data('identitas')->result();
+
+		$this->load->view('identitas_pdf', $data);
+
+		$paper_size = 'A4';
+		$orientation = 'landscape';
+		$html = $this->output->get_output();
+		$this->dompdf->set_paper($paper_size, $orientation);
+
+		$this->dompdf->load_html($html);
+		$this->dompdf->render();
+		$this->dompdf->stream("identitas_santri.pdf", array('Attachment' =>0));
+	}
 
 }

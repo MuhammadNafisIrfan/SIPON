@@ -12,6 +12,7 @@
    
    <section class="content">
    <button class="btn btn-info btn-sm"><i class="fa fa-plus"data-toggle="modal" data-target="#staticBackdrop"> Tambah DATA</i></button>
+   <a class="btn btn-warning" href=" <?php echo base_url('tunggakan/pdf') ?>"> <i class="fa fa-file"></i> Export PDF</a>
       <table  class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
         <tr>
         <th>No</th>
