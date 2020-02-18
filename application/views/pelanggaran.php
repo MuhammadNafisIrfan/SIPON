@@ -11,7 +11,8 @@
     </div>
    
    <section class="content">
-    <a class="btn btn-primary" href=" <?php echo base_url('pelanggaran/pdf') ?>"> <i class="fa fa-file"></i> Export PDF</a>
+   <button class="btn btn-primary"><i class="fa fa-plus" data-toggle="modal" data-target="#staticBackdrop"> Tambah Santri</i></button>
+    <a class="btn btn-warning" href=" <?php echo base_url('pelanggaran/pdf') ?>"> <i class="fa fa-file"></i> Export PDF</a>
       <table  class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
         <tr>
         <th>No</th>
@@ -34,4 +35,43 @@
         <?php endforeach; ?>
       </table>
    </section>
+   <div class="modal fade" id="staticBackdrop" data-backdrop="static" tabindex="-1" role="dialog" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="staticBackdropLabel">Masukkan Data Santri</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <!-- <form method="post" action="<?php echo base_url().'pelanggaran/tambah_aksi';?>"> -->
+
+        <?php echo form_open_multipart('pelanggaran/tambah_aksi'); ?>
+
+        <div class="form-group">
+        <label> Nama Santri</label>
+        <input type="text" name="nama_santri" class="form-control">
+        </div>
+
+        <div class="form-group">
+        <label> Pelanggaran </label>
+        <input type="text" name="pelanggaran" class="form-control">
+        </div>
+
+        <div class="form-group">
+        <label>Tanggal</label>
+        <input type="date" name="tanggal" class="form-control">
+        </div>
+
+
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        <button type="reset" class="btn btn-danger">Reset</button>
+        <button type="submit" class="btn btn-success">Submit </button>
+        <?php echo form_close(); ?>
+      </div>
+    </div>
+  </div>
+</div>
+</div>
   </div>

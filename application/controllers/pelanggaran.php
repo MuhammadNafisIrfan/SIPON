@@ -26,4 +26,23 @@ class Pelanggaran extends CI_Controller {
 		$this->dompdf->render();
 		$this->dompdf->stream("laporan_pelanggaran.pdf", array('Attachment' =>0));
 	}
+	public function tambah_aksi()
+	{
+		$nama_santri = $this->input->post('nama_santri');
+		$pelanggaran = $this->input->post('pelanggaran');
+		$tanggal = $this->input->post('tanggal');
+		
+
+		$data = array(
+
+			'nama_santri'	=> $nama_santri,
+			'pelanggaran'	=> $pelanggaran,
+			'tanggal'	=> $tanggal,
+			
+
+		);
+
+		$this->m_pelanggaran->input_data($data,'pelanggaran');
+		redirect('pelanggaran/index');
+	}
 }
