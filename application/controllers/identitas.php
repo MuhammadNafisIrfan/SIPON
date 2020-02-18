@@ -153,4 +153,14 @@ class Identitas extends CI_Controller {
 		$this->dompdf->stream("identitas_santri.pdf", array('Attachment' =>0));
 	}
 
+public function detail($id){
+	$this->load->model('myidentitas');
+	$detail = $this -> myidentitas->detail_data($id);
+	$data['detail'] = $detail;
+	$this->load->view('templates/header');
+	$this->load->view('templates/sidebar');
+	$this->load->view('detail',$data);
+	$this->load->view('templates/footer');
+}
+
 }

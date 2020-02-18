@@ -35,7 +35,7 @@
         <th>Kelas Payung</th>
         <th>Semester</th>
         <th>Image</th>
-        <th colspan="2">Action</th>
+        <th colspan="3">Action</th>
         </tr>
 
         <?php
@@ -56,6 +56,7 @@
             <td>
               <img src="<?php echo base_url(); ?> ../../assets/foto/<?php echo $idnt->image ?>" width="90" height="110"></img>
             </td>
+            <td><?php echo anchor ('identitas/detail/'.$idnt->id,'<div class="btn btn-primary btn-sm"><i class="fas fa-copy"></i></div>') ?></td>
             <td onclick="javascriot: return confirm('Anda yakin ingin menghapus data ini ?')"><?php echo anchor('identitas/hapus/'.$idnt->id,'<div class="btn btn-danger btn-sm"><i class="fa fa-trash"></i></div>')?></td>
             <td><?php echo anchor ('identitas/edit/'.$idnt->id,'<div class="btn btn-primary btn-sm"><i class="fa fa-edit"></i></div>') ?></td>
         </tr>
