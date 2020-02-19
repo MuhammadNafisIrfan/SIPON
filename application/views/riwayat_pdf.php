@@ -18,9 +18,8 @@ th, td {
 <tr>
         <th>No</th>
         <th>Nama</th>
-        <th>Kelas</th>
+        <th>PLP</th>
         <th>Semester</th>
-        <th>Tanggal Masuk</th>
         </tr>
 
         <?php
@@ -32,7 +31,6 @@ th, td {
             <td><?php echo $rwt->nama_santri?></td>
             <td><?php echo $rwt->kelas?></td>
             <td><?php echo $rwt->semester?></td>
-            <td><?php echo $rwt->tanggal_masuk?></td>
            
         </tr>
         <?php endforeach; ?>

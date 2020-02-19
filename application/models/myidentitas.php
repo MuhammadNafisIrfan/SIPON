@@ -20,7 +20,7 @@ class Myidentitas extends CI_Model{
         $this->db->update($table,$data);
     }
     public function detail_data($id = NULL){
-        $query = $this->db->get_where('absensi',array('id' => $id))->row();
+        $query = $this->db->get_where('detail',array('id' => $id))->row();
         return $query;
     }
 }

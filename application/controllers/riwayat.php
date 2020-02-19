@@ -25,4 +25,17 @@ class Riwayat extends CI_Controller {
 		$this->dompdf->render();
 		$this->dompdf->stream("laporan_riwayat.pdf", array('Attachment' =>0));
 	}
+	public function tambah_aksi(){
+		$nama 			= $this->input->post('nama_santri');
+		$kelas 		= $this->input->post('kelas');
+		$semester 	= $this->input->post('semester');
+
+		$data = array (
+			'nama_santri' 	=> $nama,
+			'kelas' 		=> $kelas,
+			'semester' 		=> $semester
+		);
+		$this->m_riwayat->input_data($data, 'riwayat');
+		redirect('riwayat/index');
+	}
 }
