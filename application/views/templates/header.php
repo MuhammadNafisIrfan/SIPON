@@ -167,5 +167,6 @@ var currentScrollPos = window.pageYOffset;
 .form-inline {
   float: right;
   margin-right: 16px;
+  margin-bottom: 10px;
 }
 </style>
