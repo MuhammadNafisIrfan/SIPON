@@ -164,4 +164,8 @@ var currentScrollPos = window.pageYOffset;
   width: 29.3cm;
   transition: top 0.3s;
 }
+.form-inline {
+  float: right;
+  margin-right: 16px;
+}
 </style>

@@ -23,4 +23,17 @@ class Myidentitas extends CI_Model{
         $query = $this->db->get_where('detail',array('id' => $id))->row();
         return $query;
     }
+    public function get_keyword($keyword){
+        $this->db->select('*');
+        $this->db->from('santri');
+        $this->db->like('nama', $keyword);
+        $this->db->or_like('tempat_lahir', $keyword);
+        $this->db->or_like('tanggal_lahir', $keyword);
+        $this->db->or_like('alamat', $keyword);
+        $this->db->or_like('wali', $keyword);
+        $this->db->or_like('kelas_pondok', $keyword);
+        $this->db->or_like('kelas_payung', $keyword);
+        $this->db->or_like('semester', $keyword);
+        return $this->db->get()->result();
+    }
 }
