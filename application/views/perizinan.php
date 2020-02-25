@@ -11,7 +11,7 @@
     </div>
    
    <section class="content">
-   <a class="btn btn-warning" href=" <?php echo base_url('perizinan/pdf') ?>"> <i class="fa fa-file"></i> Export PDF</a>
+   <a class="btn btn-warning" href=" <?php echo base_url('perizinan/pdf') ?>"> <i class="fa fa-file"></i> Export PDF & Print</a>
       <table  class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
         <tr>
         <th>No</th>

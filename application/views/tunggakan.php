@@ -12,7 +12,13 @@
    
    <section class="content">
    <button class="btn btn-info btn-sm"><i class="fa fa-plus"data-toggle="modal" data-target="#staticBackdrop"> Tambah DATA</i></button>
-   <a class="btn btn-warning" href=" <?php echo base_url('tunggakan/pdf') ?>"> <i class="fa fa-file"></i> Export PDF</a>
+   <a class="btn btn-warning" href=" <?php echo base_url('tunggakan/pdf') ?>"> <i class="fa fa-file"></i> Export PDF & Print</a>
+   <div class="form-inline">
+      <?php echo form_open('tunggakan/search') ?>
+      <input type="text" name="keyword" class="form-control" placeholder="Search">
+      <button type="submit" class="btn btn-success"><i class="fa fa-search"></i></button>
+      <?php echo form_close() ?>
+      </div>
       <table  class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
         <tr>
         <th>No</th>

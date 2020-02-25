@@ -45,4 +45,12 @@ class Pelanggaran extends CI_Controller {
 		$this->m_pelanggaran->input_data($data,'pelanggaran');
 		redirect('pelanggaran/index');
 	}
+	public function search(){
+		$keyword = $this->input->post('keyword');
+		$data['pelanggaran']=$this->m_pelanggaran->get_keyword($keyword);
+		$this->load->view('templates/header');
+		$this->load->view('templates/sidebar');
+		$this->load->view('pelanggaran', $data);
+		$this->load->view('templates/footer');
+	}
 }

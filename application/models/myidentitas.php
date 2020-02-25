@@ -20,7 +20,7 @@ class Myidentitas extends CI_Model{
         $this->db->update($table,$data);
     }
     public function detail_data($id = NULL){
-        $query = $this->db->get_where('detail',array('id' => $id))->row();
+        $query = $this->db->get_where('santri', array('id' => $id))->row();
         return $query;
     }
     public function get_keyword($keyword){

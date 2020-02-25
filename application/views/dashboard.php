@@ -98,12 +98,21 @@
             <!-- small box -->
             <div class="small-box bg-danger">
               <div class="inner">
-                <h3>65</h3>
+              <?php
+                $connection = mysqli_connect("localhost", "root", "", "sipon");
 
-                <p>Unique Visitors</p>
+                $query = "SELECT id FROM perizinan ORDER by id";
+                $query_run = mysqli_query($connection, $query);
+
+                $row = mysqli_num_rows($query_run);
+                echo '<h3> '.$row.' </h3>';
+                      
+                      ?>
+
+                <p>Santri Izin</p>
               </div>
               <div class="icon">
-                <i class="ion ion-pie-graph"></i>
+                <i class="fa fa-home"></i>
               </div>
               <a href="#" class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></a>
             </div>

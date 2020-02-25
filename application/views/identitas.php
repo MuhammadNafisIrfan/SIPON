@@ -21,7 +21,7 @@
    
    <section class="content">
       <button class="btn btn-info btn-sm"><i class="fa fa-plus" data-toggle="modal" data-target="#staticBackdrop"> Tambah Santri</i></button>
-      <a class="btn btn-warning" href=" <?php echo base_url('identitas/pdf') ?>"> <i class="fa fa-file"></i> Export PDF</a>
+      <a class="btn btn-warning" href=" <?php echo base_url('identitas/pdf') ?>"> <i class="fa fa-file"></i> Export PDF & Print</a>
 
       <div class="form-inline">
       <?php echo form_open('identitas/search') ?>
@@ -63,7 +63,7 @@
             <td><?php echo $idnt->kelas_payung?></td>
             <td><?php echo $idnt->semester?></td>
             <td>
-              <img src="<?php echo base_url(); ?> ../../assets/foto/<?php echo $idnt->image ?>" width="90" height="110"></img>
+              <img src="<?php echo base_url(); ?> ../../assets/foto/<?php echo $idnt->image ?>" width="90" height="110">
             </td>
             <td><?php echo anchor ('identitas/detail/'.$idnt->id,'<div class="btn btn-primary btn-sm"><i class="fas fa-copy"></i></div>') ?></td>
             <td onclick="javascriot: return confirm('Anda yakin ingin menghapus data ini ?')"><?php echo anchor('identitas/hapus/'.$idnt->id,'<div class="btn btn-danger btn-sm"><i class="fa fa-trash"></i></div>')?></td>

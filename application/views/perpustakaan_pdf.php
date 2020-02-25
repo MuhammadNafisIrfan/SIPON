@@ -11,7 +11,7 @@ th, td {
   text-align: left;    
 }
 </style><body>
-<h2 style="text-align: center">DATA RIWAYAT Santri</h2>
+<h2 style="text-align: center">DATA Peminjaman Inventaris</h2>
 <br/>
 <br/>
 <table style="width:100%">
@@ -19,20 +19,22 @@ th, td {
         <th>No</th>
         <th>Nama</th>
         <th>PLP</th>
-        <th>Semester</th>
-        <th>Tanggal</th>
+        <th>Pinjaman</th>
+        <th>Tanggal Pinjam</th>
+        <th>Tanggal Kembali</th>
         </tr>
 
         <?php
         $no = 1;
-        foreach ($riwayat as $rwt) : ?>
+        foreach ($perpustakaan as $perpus) : ?>
 
         <tr>
             <td><?php echo $no++ ?></td>
-            <td><?php echo $rwt->nama_santri?></td>
-            <td><?php echo $rwt->kelas?></td>
-            <td><?php echo $rwt->semester?></td>
-            <td><?php echo $rwt->tanggal?></td>
+            <td><?php echo $perpus->nama_santri?></td>
+            <td><?php echo $perpus->plp?></td>
+            <td><?php echo $perpus->pinjaman?></td>
+            <td><?php echo $perpus->tanggal_minjam?></td>
+            <td><?php echo $perpus->tanggal_balik?></td>
            
         </tr>
         <?php endforeach; ?>

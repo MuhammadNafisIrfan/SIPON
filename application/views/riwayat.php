@@ -4,7 +4,7 @@
       <div class="container-fluid">
         <div class="row mb-2">
           <div class="col-sm-6">
-            <h1 class="m-0 text-dark">Pelanggaran Santri</h1>
+            <h1 class="m-0 text-dark">Riwayat Santri</h1>
           </div>       
         </div>
       </div>
@@ -12,13 +12,20 @@
    
    <section class="content">
    <button class="btn btn-info btn-sm"><i class="fa fa-plus" data-toggle="modal" data-target="#staticBackdrop"> Tambah Santri</i></button>
-   <a class="btn btn-warning" href=" <?php echo base_url('riwayat/pdf') ?>"> <i class="fa fa-file"></i> Export PDF</a>
+   <a class="btn btn-warning" href=" <?php echo base_url('riwayat/pdf') ?>"> <i class="fa fa-file"></i> Export PDF & Print</a>
+   <div class="form-inline">
+      <?php echo form_open('riwayat/search') ?>
+      <input type="text" name="keyword" class="form-control" placeholder="Search">
+      <button type="submit" class="btn btn-success"><i class="fa fa-search"></i></button>
+      <?php echo form_close() ?>
+      </div>
       <table  class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
         <tr>
         <th>No</th>
         <th>Nama</th>
         <th>PLP</th>
         <th>Semester</th>
+        <th>Tanggal</th>
         </tr>
 
         <?php
@@ -30,6 +37,7 @@
             <td><?php echo $rwt->nama_santri?></td>
             <td><?php echo $rwt->kelas?></td>
             <td><?php echo $rwt->semester?></td>
+            <td><?php echo $rwt->tanggal?></td>
            
         </tr>
         <?php endforeach; ?>
@@ -60,6 +68,11 @@
         <div class="form-group">
         <label>Semester</label>
         <input type="text" name="semester" class="form-control">
+        </div>
+
+        <div class="form-group">
+        <label>Tanggal</label>
+        <input type="text" name="tanggal" class="form-control">
         </div>
 
         

@@ -26,16 +26,26 @@ class Riwayat extends CI_Controller {
 		$this->dompdf->stream("laporan_riwayat.pdf", array('Attachment' =>0));
 	}
 	public function tambah_aksi(){
-		$nama 			= $this->input->post('nama_santri');
+		$nama 		= $this->input->post('nama_santri');
 		$kelas 		= $this->input->post('kelas');
 		$semester 	= $this->input->post('semester');
+		$tanggal 	= $this->input->post('tanggal');
 
 		$data = array (
 			'nama_santri' 	=> $nama,
 			'kelas' 		=> $kelas,
-			'semester' 		=> $semester
+			'semester' 		=> $semester,
+			'tanggal' 		=> $tanggal
 		);
 		$this->m_riwayat->input_data($data, 'riwayat');
 		redirect('riwayat/index');
+	}
+	public function search(){
+		$keyword = $this->input->post('keyword');
+		$data['riwayat']=$this->m_riwayat->get_keyword($keyword);
+		$this->load->view('templates/header');
+		$this->load->view('templates/sidebar');
+		$this->load->view('riwayat', $data);
+		$this->load->view('templates/footer');
 	}
 }

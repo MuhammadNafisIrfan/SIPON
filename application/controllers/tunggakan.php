@@ -11,7 +11,7 @@ class Tunggakan extends CI_Controller {
 	}
 
 	public function tambah_aksi(){
-		$nama 			= $this->input->post('nama');
+		$nama 			= $this->input->post('nama'); 
 		$nominal 		= $this->input->post('nominal');
 		$keterangan 	= $this->input->post('keterangan');
 
@@ -75,5 +75,13 @@ public function pdf(){
 	$this->dompdf->load_html($html);
 	$this->dompdf->render();
 	$this->dompdf->stream("laporan_tunggakan.pdf", array('Attachment' =>0));
+}
+public function search(){
+	$keyword = $this->input->post('keyword');
+	$data['tunggakan']=$this->m_tunggakan->get_keyword($keyword);
+	$this->load->view('templates/header');
+	$this->load->view('templates/sidebar');
+	$this->load->view('tunggakan', $data);
+	$this->load->view('templates/footer');
 }
 }

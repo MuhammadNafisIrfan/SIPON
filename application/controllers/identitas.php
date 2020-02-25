@@ -155,7 +155,7 @@ class Identitas extends CI_Controller {
 
 	public function detail($id){
 		$this->load->model('myidentitas');
-		$detail = $this -> myidentitas->detail_data($id);
+		$detail = $this->myidentitas->detail_data($id);
 		$data['detail'] = $detail;
 		$this->load->view('templates/header');
 		$this->load->view('templates/sidebar');
