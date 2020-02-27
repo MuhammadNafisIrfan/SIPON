@@ -1,5 +1,7 @@
  <div class="content-wrapper">
+ 
     <section class="content">
+    
         <?php foreach($tunggakan as $tgk) { ?>
 
         <form action="<?php echo base_url().'tunggakan/update'; ?>" method="post"> 

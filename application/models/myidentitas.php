@@ -36,4 +36,8 @@ class Myidentitas extends CI_Model{
         $this->db->or_like('semester', $keyword);
         return $this->db->get()->result();
     }
+    public function tampil_absensi()
+    {
+        return $this->db->get('absensi');
+    }
 }

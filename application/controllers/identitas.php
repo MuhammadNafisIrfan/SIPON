@@ -163,6 +163,16 @@ class Identitas extends CI_Controller {
 		$this->load->view('templates/footer');
 	}
 
+
+	public function absensi()
+	{
+	$data['absensi'] = $this->myidentitas->tampil_absensi()->result();
+	$this->load->view('templates/header');
+	$this->load->view('templates/sidebar');
+	$this->load->view('absensi', $data);
+	$this->load->view('templates/footer');
+	}
+
 	public function search(){
 		$keyword = $this->input->post('keyword');
 		$data['identitas']=$this->myidentitas->get_keyword($keyword);

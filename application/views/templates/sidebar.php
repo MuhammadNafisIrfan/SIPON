@@ -38,7 +38,7 @@
               <li class="nav-item">
                 <a href="../identitas/index" class="nav-link">
                   <i class="far fa-circle nav-icon"></i>
-                  <p>Identitas</p>
+                  <p>Data Santri</p>
                 </a>
               </li>
               <li class="nav-item">
@@ -53,12 +53,7 @@
                   <p>Pelanggaran</p>
                 </a>
               </li>
-              <li class="nav-item">
-                <a href="../absensi/index" class="nav-link">
-                  <i class="far fa-circle nav-icon"></i>
-                  <p>Absensi</p>
-                </a>
-              </li>
+             
               <li class="nav-item">
                 <a href="../tunggakan/index" class="nav-link">
                   <i class="far fa-circle nav-icon"></i>

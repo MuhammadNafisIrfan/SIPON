@@ -4,7 +4,7 @@
       <div class="container-fluid">
         <div class="row mb-2">
           <div class="col-sm-6">
-            <h1 class="m-0 text-dark">Identitas Santri</h1>
+            <h1 class="m-0 text-light">Identitas Santri</h1>
           </div>       
         </div>
       </div>
@@ -21,7 +21,7 @@
    
    <section class="content">
       <button class="btn btn-info btn-sm"><i class="fa fa-plus" data-toggle="modal" data-target="#staticBackdrop"> Tambah Santri</i></button>
-      <a class="btn btn-warning" href=" <?php echo base_url('identitas/pdf') ?>"> <i class="fa fa-file"></i> Export PDF & Print</a>
+      <a class="btn btn-warning btn-sm" href=" <?php echo base_url('identitas/pdf') ?>"> <i class="fa fa-file "></i> Export PDF & Print</a>
 
       <div class="form-inline">
       <?php echo form_open('identitas/search') ?>
@@ -34,16 +34,9 @@
       <table  class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
         <tr>
         <th>No</th>
-        <th>Nama Lengkap</th>
+        <th>Nama</th>
         <th>NIS</th>
-        <th>Tempat Lahir</th>
-        <th>Tanggal Lahir</th>
-        <th>Alamat</th>
-        <th>Wali</th>
-        <th>Kelas Pondok</th>
-        <th>Kelas Payung</th>
-        <th>Semester</th>
-        <th>Image</th>
+       
         <th colspan="3">Action</th>
         </tr>
 
@@ -55,16 +48,7 @@
             <td><?php echo $no++ ?></td>
             <td><?php echo $idnt->nama?></td>
             <td><?php echo $idnt->nis?></td>
-            <td><?php echo $idnt->tempat_lahir?></td>
-            <td><?php echo $idnt->tanggal_lahir?></td>
-            <td><?php echo $idnt->alamat?></td>
-            <td><?php echo $idnt->wali?></td>
-            <td><?php echo $idnt->kelas_pondok?></td>
-            <td><?php echo $idnt->kelas_payung?></td>
-            <td><?php echo $idnt->semester?></td>
-            <td>
-              <img src="<?php echo base_url(); ?> ../../assets/foto/<?php echo $idnt->image ?>" width="90" height="110">
-            </td>
+            
             <td><?php echo anchor ('identitas/detail/'.$idnt->id,'<div class="btn btn-primary btn-sm"><i class="fas fa-copy"></i></div>') ?></td>
             <td onclick="javascriot: return confirm('Anda yakin ingin menghapus data ini ?')"><?php echo anchor('identitas/hapus/'.$idnt->id,'<div class="btn btn-danger btn-sm"><i class="fa fa-trash"></i></div>')?></td>
             <td><?php echo anchor ('identitas/edit/'.$idnt->id,'<div class="btn btn-primary btn-sm"><i class="fa fa-edit"></i></div>') ?></td>
