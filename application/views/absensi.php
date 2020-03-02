@@ -14,7 +14,7 @@
 
 
 
-<div  align="right">
+<div align="right">
 
 <a class="btn btn-primary btn-sm" href=" <?php echo base_url('identitas/index') ?>"> <i class="fa fa-reply "></i> Back</a>
 </div>
@@ -24,7 +24,7 @@
         <tr>
         <th>No</th>
         <th>Nama</th>
-        <th>Tanggal</th>
+        <th>NIS</th>
         <th>Tanggal</th>
        
         <th colspan="3">Action</th>
@@ -36,7 +36,7 @@
 
         <tr>
             <td><?php echo $no++ ?></td>
-            <td><?php echo $abs->nama_santri?></td>
+            <td><?php echo $abs->nama?></td>
             <td><?php echo $abs->nis?></td>
             
            
