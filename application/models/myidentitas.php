@@ -38,6 +38,10 @@ class Myidentitas extends CI_Model{
     }
     public function tampil_absensi()
     {
-        return $this->db->get('absensi');
+        $this->db->select("santri.id,santri.nama,santri.nis");
+        $this->db->from('santri');
+        $this->db->join('absensi', 'absensi.id = santri.id');
+        $query = $this->db->get();
+        return $query->result();
     }
 }
