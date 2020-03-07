@@ -9,7 +9,17 @@
         </div>
       </div>
     </div>
-   
+
+    <div class="container-fluid">
+        <div class="row mb-2">
+          <div class="col-sm-6">
+            <h3 class="m-0 text-dark">Tunggakan Santri</h3>
+          </div>       
+        </div>
+    
+    </div>
+
+
    <section class="content">
    <button class="btn btn-info btn-sm"><i class="fa fa-plus"data-toggle="modal" data-target="#staticBackdrop"> Tambah DATA</i></button>
    <a class="btn btn-warning" href=" <?php echo base_url('tunggakan/pdf') ?>"> <i class="fa fa-file"></i> Export PDF & Print</a>
