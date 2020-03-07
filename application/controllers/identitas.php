@@ -71,6 +71,7 @@ class Identitas extends CI_Controller {
 
 	public function edit ($id)
 	{
+		
 		$where = array ('id' =>$id);
 		$data['identitas'] = $this->myidentitas->edit($where,'santri')->result();
 

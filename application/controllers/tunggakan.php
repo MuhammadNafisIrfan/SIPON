@@ -10,6 +10,13 @@ class Tunggakan extends CI_Controller {
 		$this->load->view('templates/footer');
 	}
 
+	public function hapus ($id)
+	{
+		$where = array ('id' => $id);
+		$this->m_tunggakan->hapus_data($where, 'tunggakan');
+		redirect ('tunggakan/index');
+	}
+
 	public function tambah_aksi(){
 		$nama 			= $this->input->post('nama'); 
 		$nominal 		= $this->input->post('nominal');

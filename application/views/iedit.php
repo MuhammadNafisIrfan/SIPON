@@ -1,4 +1,22 @@
 <div class="content-wrapper">
+<div class="content-header">
+      <div class="container-fluid">
+        <div class="row mb-2">
+          <div class="col-sm-6">
+            <h1 class="m-0 text-light">.</h1>
+          </div>       
+        </div>
+      </div>
+    </div>
+    <div class="content-header">
+      <div class="container-fluid">
+        <div class="row mb-2 ">
+          <div class="col-sm-6">
+            <h1 class="m-0 text-dark">Edit Data Santri</h1>
+          </div>       
+        </div>
+      </div>
+    </div>
      <!-- Main Sidebar Container -->
  <aside class="main-sidebar sidebar-dark-primary ">
     <!-- Brand Logo -->
@@ -51,7 +69,7 @@
 
         <div class="from-group">
         <label>Tanggal Lahir</label>
-        <input type="text" name="tanggal_lahir" class="form-control" value="<?php echo $idnt->tanggal_lahir ?>">
+        <input type="date" name="tanggal_lahir" class="form-control" value="<?php echo $idnt->tanggal_lahir ?>">
         </div>
 
         <div class="from-group">
@@ -97,6 +115,7 @@
         
         <button type="reset" class="btn btn-danger">Reset</button>
         <button type="submit" class="btn btn-success">Submit</button>
+        <a class="btn btn-primary " href=" <?php echo base_url('identitas/index') ?>">Cancel</a>
 
         </form>
         <?php echo form_close(); ?>

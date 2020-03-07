@@ -1,5 +1,5 @@
- <div class="content-wrapper">
- <div class="content-header">
+<div class="content-wrapper">
+<div class="content-header">
       <div class="container-fluid">
         <div class="row mb-2">
           <div class="col-sm-6">
@@ -43,38 +43,41 @@
     </div>
     <!-- /.sidebar -->
   </aside>
-    <section class="content">
-    
-        <?php foreach($tunggakan as $tgk) { ?>
+ <section class="content">
+ 
+     <?php foreach($pelanggaran as $pg) { ?>
 
-        <form action="<?php echo base_url().'tunggakan/update'; ?>" method="post"> 
+     <form action="<?php echo base_url().'pelanggaran/update'; ?>" method="post"> 
 
-        <div class="from-group">
-        <label>Nama Santri</label>
-        <input type="hidden" name="id" class="form-control" value="<?php echo $tgk->id ?>">
-        <select name="nama"class="form-control"  value="<?php echo $tgk->nama ?>">
+     <div class="from-group">
+     <label>Nama Santri</label>
+     <input type="hidden" name="id" class="form-control" value="<?php echo $pg->id ?>">
+     <select name="pelanggaran"class="form-control"  value="<?php echo $pg->pelanggaran ?>">
         <option> dff</option>
         <option>paii</option>
         </select>
-        </div>
+     </div>
 
-        <div class="from-group">
-        <label>Nominal</label>
-        <input type="text" name="nominal" class="form-control" value="<?php echo $tgk->nominal ?>">
-        </div>
+     <div class="from-group">
+     <label>Pelanggaran</label>
+     <select name="pelanggaran"class="form-control"  value="<?php echo $pg->pelanggaran ?>">
+        <option> dff</option>
+        <option>paii</option>
+        </select>
+     <!-- <input type="text" name="pelanggaran" class="form-control" value="<?php echo $pg->pelanggaran ?>"> -->
+     </div>
 
-        <div class="from-group">
-        <label>Keterangan   </label>
-        <input type="text" name="keterangan" class="form-control" value="<?php echo $tgk->keterangan ?>">
-        </div>
+     <div class="from-group">
+     <label>Tanggal</label>
+     <input type="date" name="tanggal" class="form-control" value="<?php echo $pg->tanggal ?>">
+     </div>
 
-       
-        <button type="reset" class="btn btn-danger btn-sm ">Reset</button>
-        <button type="submit" class="btn btn-success btn-sm">Submit</button>
-        <button class="btn btn-danger
-         btn-sm" href=" <?php echo base_url('tunggakan/index') ?>">  Cancel</button>
-        
-        </form>
-            <?php }?>
-    </section>
+    
+     <button type="reset" class="btn btn-danger btn-sm">Reset</button>
+     <button type="submit" class="btn btn-success btn-sm">Submit</button>
+    
+ <button  align="right" class="btn btn-danger btn-sm" href=" <?php echo base_url('pelanggaran/index') ?>">  Cancel</button>
+     </form>
+         <?php }?>
+ </section>
 </div>

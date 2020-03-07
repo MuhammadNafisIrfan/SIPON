@@ -8,6 +8,13 @@ class M_pelanggaran extends CI_Model{
     public function input_data($data,$table){
         $this->db->insert($table,$data);
     }
+    public function edit_data($where, $table){
+        return $this->db->get_where($table,$where);
+     }
+    public function hapus_data($where, $table){
+        $this->db->where($where);
+        $this->db->delete($table);
+    }
     public function get_keyword($keyword){
         $this->db->select('*');
         $this->db->from('pelanggaran');

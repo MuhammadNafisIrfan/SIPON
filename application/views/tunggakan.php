@@ -4,6 +4,15 @@
       <div class="container-fluid">
         <div class="row mb-2">
           <div class="col-sm-6">
+            <h1 class="m-0 text-light">.</h1>
+          </div>       
+        </div>
+      </div>
+    </div>
+    <div class="content-header">
+      <div class="container-fluid">
+        <div class="row mb-2">
+          <div class="col-sm-6">
             <h1 class="m-0 text-dark">Tunggakan Santri</h1>
           </div>       
         </div>
@@ -12,7 +21,7 @@
    
    <section class="content">
    <button class="btn btn-info btn-sm"><i class="fa fa-plus"data-toggle="modal" data-target="#staticBackdrop"> Tambah DATA</i></button>
-   <a class="btn btn-warning" href=" <?php echo base_url('tunggakan/pdf') ?>"> <i class="fa fa-file"></i> Export PDF & Print</a>
+   <a class="btn btn-warning btn-sm" href=" <?php echo base_url('tunggakan/pdf') ?>"> <i class="fa fa-file"></i> Export PDF & Print</a>
    <div class="form-inline">
       <?php echo form_open('tunggakan/search') ?>
       <input type="text" name="keyword" class="form-control" placeholder="Search">
@@ -25,7 +34,7 @@
         <th>Nama</th>
         <th>Nominal</th>
         <th>Keterangan</th>
-        <th>Action</th>
+        <th colspan= "2">Action</th>
         </tr>
 
         <?php
@@ -37,6 +46,7 @@
             <td><?php echo $tgk->nama?></td>
             <td>Rp. <?php echo $tgk->nominal?></td>
             <td><?php echo $tgk->keterangan?></td>
+            <td onclick="javascriot: return confirm('Anda yakin ingin menghapus data ini ?')"><?php echo anchor('tunggakan/hapus/'.$tgk->id,'<div class="btn btn-danger btn-sm"><i class="fa fa-trash"></i></div>')?></td>
             <td><?php echo anchor ('tunggakan/edit/'.$tgk->id,'<div class="btn btn-primary btn-sm"><i class="fa fa-edit"></i></div>') ?></td>
            
         </tr>
@@ -57,7 +67,11 @@
 
         <div class="form-group">
         <label> Nama Santri</label>
-        <input type="text" name="nama" class="form-control">
+        <select name="nama"  class="form-control">
+        <option>Kelas 1</option>
+        <option>Kelas 2</option>
+        <option>Kelas 3</option>
+        </select>
         </div>
 
         <div class="form-group">

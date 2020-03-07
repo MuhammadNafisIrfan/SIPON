@@ -10,6 +10,10 @@ class M_tunggakan extends CI_Model{
     public function edit_data($where, $table){
        return $this->db->get_where($table,$where);
     }
+    public function hapus_data($where, $table){
+        $this->db->where($where);
+        $this->db->delete($table);
+    }
     public function get_keyword($keyword){
         $this->db->select('*');
         $this->db->from('tunggakan');

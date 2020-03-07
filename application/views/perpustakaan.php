@@ -1,4 +1,13 @@
 <div class="content-wrapper">
+<div class="content-header">
+      <div class="container-fluid">
+        <div class="row mb-2">
+          <div class="col-sm-6">
+            <h1 class="m-0 text-light">.</h1>
+          </div>       
+        </div>
+      </div>
+    </div>
     <!-- Content Header (Page header) -->
     <div class="content-header">
       <div class="container-fluid">
@@ -12,8 +21,8 @@
     
    
    <section class="content">
-   <button class="btn btn-info btn-sm"><i class="fa fa-plus" data-toggle="modal" data-target="#staticBackdrop"> Tambah Santri</i></button>
-   <a class="btn btn-warning" href=" <?php echo base_url('perpustakaan/pdf') ?>"> <i class="fa fa-file"></i> Export PDF & Print</a>
+   <button class="btn btn-info btn-sm"><i class="fa fa-plus" data-toggle="modal" data-target="#staticBackdrop"> Tambah Data</i></button>
+   <a class="btn btn-warning btn-sm" href=" <?php echo base_url('perpustakaan/pdf') ?>"> <i class="fa fa-file"></i> Export PDF & Print</a>
    <div class="form-inline">
       <?php echo form_open('perpustakaan/search') ?>
       <input type="text" name="keyword" class="form-control" placeholder="Search">

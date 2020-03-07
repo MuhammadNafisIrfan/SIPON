@@ -53,4 +53,44 @@ class Pelanggaran extends CI_Controller {
 		$this->load->view('pelanggaran', $data);
 		$this->load->view('templates/footer');
 	}
+	public function edit($id){
+		$where = array('id' => $id);
+		$data['pelanggaran'] = $this->m_pelanggaran->edit_data($where,'pelanggaran')->result();
+		$this->load->view('templates/header');
+	
+		$this->load->view('pelanggaran_edit', $data);
+		$this->load->view('templates/footer');
+
+	}
+	public function hapus ($id)
+	{
+		$where = array ('id' => $id);
+		$this->m_pelanggaran->hapus_data($where, 'pelanggaran');
+		redirect ('pelanggaran/index');
+	}
+	public function update()
+	{	
+		$id = $this->input->post('id');
+		$nama_santri = $this->input->post('nama_santri');
+		$pelanggaran = $this->input->post('pelanggaran');
+		$tanggal = $this->input->post('tanggal');
+
+
+		$data = array(
+
+			
+			'nama_santri'	=> $nama_santri,
+			'pelanggaran'	=> $pelanggaran,
+			'tanggal'	=> $tanggal,
+
+		);
+
+		$where = array(
+			'id'	=> $id
+		);
+
+		$this->myidentitas->update_data($where,$data,'pelanggaran');
+		redirect('pelanggaran/index');
+	}
 }
+
