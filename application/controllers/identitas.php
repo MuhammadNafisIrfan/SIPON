@@ -183,4 +183,12 @@ class Identitas extends CI_Controller {
 		$this->load->view('templates/footer');
 	}
 
+	public function getAbsensi(){
+		$this->db->select("santri.id, santri.nis, santri.nama");
+		$this->db->from('santri');
+		$this->db->join('absensi', 'absensi.id = santri.id');
+		$query = $this->db->get();
+		return $query->result();
+	}
+
 }

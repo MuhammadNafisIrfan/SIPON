@@ -44,4 +44,12 @@ class Myidentitas extends CI_Model{
         $query = $this->db->get();
         return $query->result();
     }
+
+    public function getAbsensi(){
+        $this->db->select("santri.id, santri.nis, santri.nama");
+		$this->db->from('santri');
+		$this->db->join('absensi', 'absensi.id = santri.id');
+		$query = $this->db->get();
+		return $query->result();
+    }
 }
